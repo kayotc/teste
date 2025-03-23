@@ -82,10 +82,11 @@
 
 .main .content{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     flex-grow: 1;
+    gap: 30px;
     box-shadow: 2px 5px 10px rgba(0,0,0,.5);  
     background-image: url("../assets/ecommerce-background.jpg");
     background-position: auto;
@@ -102,8 +103,8 @@
     display: flex;
     width: 70%;
     flex-flow: column wrap;
-    padding: 1  0px;
-    gap: 20px;
+    padding: 20px;
+    gap: 35px;
     filter: drop-shadow( 16px 16px 10px rgba(0,0,0,.5));
 }
 
@@ -142,52 +143,45 @@
     font-size: 1.4rem;
     color: #312f2f;
     border-radius: 8px;
-    border: 2px solid transparent;
+    border: none;
     box-shadow: 2px 5px 10px rgba(0,0,0,.5);    
-    transition: ease-in-out .5s;
+    transition: ease-in-out .3s;
 }
 
 .main .content .btn-and-info button:hover{
     color: #ffff;
-    background: transparent;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-name: test;
     animation-iteration-count: infinite;
-    box-shadow: 1px 1px 10px 4px rgb(18, 18, 157);
-    cursor: pointer;
-    filter: brightness(3);
 }
 
-.main .content .btn-and-info #entrar, a{
+.main .content .btn-and-info p, a{
     color: #fff;
     font-size: 1.1rem;
 }
 
-/*Box shadow 
-    Primeiro: Move as laterais
-    Segundo: Move a altura
-    Terceiro: blur
-    Quarto: Tamanho 
-*/
 
 @keyframes test{
     0%{
-        border: transparent;
-        border-right: 3px solid blue;
+        box-shadow: 2px 2px 20px 8px #0a52be;
+        background: linear-gradient(0deg, #0a52be, #168ed3);
     }
     25%{
-        border: transparent;
-        border-bottom: 3px solid blue;
+        box-shadow: 2px 2px 20px 8px #0a52be;
+        background: linear-gradient(45deg, #0a52be, #168ed3);
     }
     50%{
-        border: transparent;
-        border-left: 3px solid blue;
+        box-shadow: 2px 2px 20px 8px #0a52be;
+        background: linear-gradient(90deg, #0a52be, #168ed3);
+        transform:  scale(1.09);
     }
     75%{
-        border: transparent;
-        border-top: 3px solid blue;
+        box-shadow: 2px 2px 20px 8px #0a52be;
+        background: linear-gradient(140deg, #0a52be, #168ed3);
+    }
+    100%{
+        box-shadow: 2px 2px 20px 8px #0a52be;
+        background: linear-gradient(360deg, #0a52be, #168ed3);
     }
 }
-
-
 
