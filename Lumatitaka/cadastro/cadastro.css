@@ -1,0 +1,178 @@
+.main{
+    display: flex;
+    min-height: 100vh;
+    padding: 2.2rem;
+}
+.back{
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-image: url("../assets/ecommerce-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(20px);
+    filter: brightness(.3);
+}
+
+.main .container{
+    display: flex;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.main .resume{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: .1;
+    padding: 10px 20px 5rem;
+    gap: 40px;
+    box-shadow: 2px 5px 10px rgba(0,0,0,.5);  
+    background-image: url("../assets/ecommerce-background.jpg");
+    background-position: start;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main img{
+    height: 100px;
+    width: 100px;
+    transition: ease-in-out .3s;
+    filter: drop-shadow(5px 5px 1px rgb(0,0,0,.5));
+}
+
+.main img:hover{
+    transform: scale(1.2) translateY(-5px) translateX(-5px);
+    filter: drop-shadow(6px 6px 3px #312f2f);
+}
+
+.main .resume a{
+    text-decoration: none;
+    font-size: 20px;
+    color: aliceblue;
+    position: relative;
+    transition: ease-in-out .3s;
+    filter: drop-shadow(6px 6px 1px rgb(0,0,0,.5));
+}
+
+.main .resume a:hover{
+    transform: translateY(-5px) translateX(-5px);
+    filter: drop-shadow(6px 6px 3px #000);
+}   
+
+.main .resume a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: aliceblue;
+    transition: ease-in-out .3s;
+}
+
+.main .resume a:hover::after{
+    width: 90%;
+    margin: auto;
+}
+
+.main .content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 20px;
+    box-shadow: 2px 5px 10px rgba(0,0,0,.5);  
+    background-image: url("../assets/ecommerce-background.jpg");
+    background-position: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main .title{
+    font-size: 1.5rem;
+    color: #168ed3;
+}
+
+.main .content .inputs{
+    display: flex;
+    width: 70%;
+    flex-flow: column wrap;
+    padding: 20px;
+    gap: 30px;
+    filter: drop-shadow( 16px 16px 10px rgba(0,0,0,.5));
+}
+
+.main .content .inputs input{
+    padding: 10px 30px 10px 10px;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px rgb(218, 239, 241) solid;
+    color:aliceblue;
+    font-size: 1rem;
+}
+
+.main .content .inputs input::placeholder{
+    color: white;
+    transition: ease-in-out .3s;
+    font-size: 1rem;
+}
+
+.main .content .inputs input:focus::placeholder{
+    position: absolute;
+    transform: translateY(-30px);
+    color: rgb(243, 8, 8);
+}
+
+
+.main .content .btn-and-info{
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    align-items: auto;
+    padding: 10px;
+}
+
+.main .content .btn-and-info button{
+    padding: 8px;
+    font-size: 1.4rem;
+    color: #312f2f;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 2px 5px 10px rgba(0,0,0,.5);    
+    transition: ease-in-out .3s;
+}
+
+.main .content .btn-and-info button:hover{
+    
+    animation-duration: 1s;
+    animation-name: test;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes test{
+    0%{
+        background: linear-gradient(75deg, #0a52be, #168ed3);
+    }
+    25%{
+        background: linear-gradient(150deg, #0a52be, #168ed3);
+    }
+    50%{
+        background: linear-gradient(225deg, #0a52be, #168ed3);
+        transform:  scale(1.09);
+    }
+    75%{
+        background: linear-gradient(340deg, #0a52be, #168ed3);
+    }
+    100%{
+        background: linear-gradient(360deg, #0a52be, #168ed3);
+    }
+}
+
